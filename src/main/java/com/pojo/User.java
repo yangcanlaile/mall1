@@ -49,4 +49,9 @@ public class User {
     public void setDesc(String desc) {
         this.desc = desc;
     }
+
+    public String toString() {
+        return id + "," + username + "," + age + "," + phone;
+
+    }
 }
