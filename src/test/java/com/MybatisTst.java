@@ -1,5 +1,6 @@
-package com.test;
+package com;
 
+import com.mybatis.UserMapper;
 import com.pojo.User;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -13,7 +14,7 @@ import static org.apache.ibatis.io.Resources.getResourceAsStream;
 
 public class MybatisTst {
     @Test
-    public void test() throws IOException {
+    public void test1() throws IOException {
         String resource = "mybatis-config.xml";
         InputStream inputStream = getResourceAsStream(resource);
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
@@ -21,9 +22,23 @@ public class MybatisTst {
         SqlSession session = sqlSessionFactory.openSession();
         try {
             User user = (User) session.selectOne("org.mybatis.example.UserMapper.selectUser", 2);
-            System.out.println("user's info:" + (user != null? user.toString() : null));
+            System.out.println("user's info:" + (user != null ? user.toString() : null));
         } finally {
             session.close();
         }
     }
+
+    @Test
+    public void test2() throws IOException {
+        String resource = "mybatis-config.xml";
+        InputStream inputStream = getResourceAsStream(resource);
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+
+        SqlSession session = sqlSessionFactory.openSession();
+        UserMapper mapper = session.getMapper(UserMapper.class);
+        User user = mapper.selectUser(1);
+        System.out.println("user info: " + user);
+
+    }
 }
+
