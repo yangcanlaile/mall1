@@ -1,7 +1,7 @@
 package com;
 
-import com.mybatis.UserMapper;
-import com.pojo.User;
+import com.jiagouedu.mapper.UserMapper;
+import com.jiagouedu.pojo.User;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
@@ -36,7 +36,7 @@ public class MybatisTst {
 
         SqlSession session = sqlSessionFactory.openSession();
         UserMapper mapper = session.getMapper(UserMapper.class);
-        User user = mapper.selectUser(1);
+        User user = mapper.selectByPrimaryKey(1);
         System.out.println("user info: " + user);
 
     }

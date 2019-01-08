@@ -24,7 +24,7 @@ CREATE TABLE `user` (
   `username` varchar(32) DEFAULT NULL,
   `age` int(11) DEFAULT NULL,
   `phone` varchar(32) DEFAULT NULL,
-  `desc` varchar(32) DEFAULT NULL,
+  `des` varchar(32) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
