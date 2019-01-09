@@ -1,21 +1,21 @@
 package com.jiagouedu.pojo;
 
 public class User {
-    private Integer id;
+    private Long id;
 
     private String username;
 
     private Integer age;
 
-    private String phone;
+    private Long phone;
 
-    private String des;
+    private String desc;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -35,19 +35,19 @@ public class User {
         this.age = age;
     }
 
-    public String getPhone() {
+    public Long getPhone() {
         return phone;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone == null ? null : phone.trim();
+    public void setPhone(Long phone) {
+        this.phone = phone;
     }
 
-    public String getDes() {
-        return des;
+    public String getDesc() {
+        return desc;
     }
 
-    public void setDes(String des) {
-        this.des = des == null ? null : des.trim();
+    public void setDesc(String desc) {
+        this.desc = desc == null ? null : desc.trim();
     }
 }
