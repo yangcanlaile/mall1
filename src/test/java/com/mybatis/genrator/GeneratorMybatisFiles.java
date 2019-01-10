@@ -1,5 +1,6 @@
 package com.mybatis.genrator;
 
+
 import com.sun.javaws.Main;
 import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.config.Configuration;
