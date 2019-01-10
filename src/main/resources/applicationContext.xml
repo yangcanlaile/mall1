@@ -20,5 +20,12 @@
         <property name="jdbcUrl" value="jdbc:mysql://localhost:3306"/>
 
     </bean>
+    <bean id="fine" class="com.jiagouedu.spring.FineSpring">
+        <constructor-arg name="name" value="canyang"></constructor-arg>
+    </bean>
+
+    <bean id="methodInject" class="com.jiagouedu.spring.MethodInject">
+        <lookup-method name="getFine" bean="fine"></lookup-method>
+    </bean>
 
 </beans>

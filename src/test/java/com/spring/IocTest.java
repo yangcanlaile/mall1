@@ -1,6 +1,7 @@
 package com.spring;
 
 import com.jiagouedu.spring.HelloSpring;
+import com.jiagouedu.spring.MethodInject;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -10,6 +11,8 @@ public class IocTest {
 
     public static void main(String[] args) {
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
-        ctx.getBean("factoryBean");
+        MethodInject mj = (MethodInject) ctx.getBean("methodInject");
+        mj.getFine().test();
+
     }
 }
