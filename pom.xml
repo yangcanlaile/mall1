@@ -142,7 +142,7 @@
                         <encoding>UTF-8</encoding>
                         <compilerArguments>
                             <!--<verbose/>   显示编译的全过程-->
-                            <bootclasspath>${env.JAVA_HOME}/jre/lib/javaws.jar${path.separator}${java.home}/lib/rt.jar${path.separator}${java.home}/lib/jce.jar${path.separator}</bootclasspath>
+                            <bootclasspath>${JAVA_HOME}/jre/lib/javaws.jar${path.separator}${java.home}/lib/rt.jar${path.separator}${java.home}/lib/jce.jar${path.separator}</bootclasspath>
                         </compilerArguments>
                     </configuration>
                 </plugin>
