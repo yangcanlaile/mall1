@@ -8,9 +8,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class SingleThreadEchoServer {
-
     private int port;
-
     public SingleThreadEchoServer(int port) {
         this.port = port;
     }

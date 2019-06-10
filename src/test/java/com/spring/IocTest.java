@@ -1,8 +1,6 @@
 package com.spring;
 
-import com.jiagouedu.spring.HelloSpring;
-import com.jiagouedu.spring.MethodInject;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import java.io.File;
 
 /**
  * Created by Enzo Cotter on 2019/1/9.
@@ -10,9 +8,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class IocTest {
 
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
-        MethodInject mj = (MethodInject) ctx.getBean("methodInject");
-        mj.getFine().test();
+//        File[] hiddenFiles = new File(".").listFiles(new FileFilter() {
+//            @Override
+//            public boolean accept(File file) {
+//                return file.isHidden();
+//            }
+//        });
+
+        File[] hiddenFiles = new File(".").listFiles(File::isHidden);
 
     }
 }
