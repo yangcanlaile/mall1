@@ -44,6 +44,7 @@ public class IocTest {
         Predicate<String> nonEmptyStringPredicate = (String s) -> !s.isEmpty();
         List<String> li = filter(lists, nonEmptyStringPredicate);
         System.out.println(li);
+
     }
 
 }
