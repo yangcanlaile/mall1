@@ -19,7 +19,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <mysql-connector-java.version>5.1.15</mysql-connector-java.version>
-        <spring.version>4.2.2.RELEASE</spring.version>
+        <spring.version>5.3.18</spring.version>
         <servlet.version>3.0-alpha-1</servlet.version>
         <commons-dbcp.version>1.4</commons-dbcp.version>
         <aspectj.version>1.8.1</aspectj.version>
